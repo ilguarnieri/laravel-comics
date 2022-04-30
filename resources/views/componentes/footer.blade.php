@@ -181,27 +181,27 @@
                 <ul>
                     <li>
                         <a href="#">
-                            <img src="../assets/img/footer-facebook.png" alt="facebook">
+                            <img src="{{ asset('assets/img/footer-facebook.png') }}" alt="facebook">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="../assets/img/footer-twitter.png" alt="twitter">
+                            <img src="{{ asset('assets/img/footer-twitter.png') }}" alt="twitter">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="../assets/img/footer-youtube.png" alt="fyoutube">
+                            <img src="{{ asset('assets/img/footer-youtube.png') }}" alt="fyoutube">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="../assets/img/footer-pinterest.png" alt="pinterest">
+                            <img src="{{ asset('assets/img/footer-pinterest.png') }}" alt="pinterest">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="../assets/img/footer-periscope.png" alt="periscope">
+                            <img src="{{ asset('assets/img/footer-periscope.png') }}" alt="periscope">
                         </a>
                     </li>
                 </ul>
