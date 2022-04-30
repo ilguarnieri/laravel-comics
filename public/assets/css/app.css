@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Greta Sans Condensed Bold", "Greta Sans Bold", Arial, sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.d-none {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0282F9;
+}
+
+@media screen and (max-width: 900px) {
+  .p-fix {
+    position: fixed;
+    background-color: white;
+    z-index: 999;
+  }
+}
+header {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+header .menu-wrapper {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+header .menu-wrapper .menu-logo {
+  max-width: 80px;
+  cursor: pointer;
+}
+header .menu-wrapper .menu-link {
+  display: flex;
+  height: 100%;
+  gap: 34px;
+}
+header .menu-wrapper .menu-link ul {
+  display: contents;
+}
+header .menu-wrapper .menu-link ul .nav-item {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  font-size: 12px;
+}
+header .menu-wrapper .menu-link ul .nav-item a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header .menu-wrapper .menu-link ul .nav-item.active, header .menu-wrapper .menu-link ul .nav-item :hover {
+  color: #0282F9;
+  transition: all 300ms linear;
+}
+header .menu-wrapper .menu-link ul .nav-item.active a::after, header .menu-wrapper .menu-link ul .nav-item:hover a::after {
+  content: "";
+  display: block;
+  background-color: #0282F9;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-animation: after_enter 300ms linear;
+          animation: after_enter 300ms linear;
+}
+@-webkit-keyframes after_enter {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 5px;
+  }
+}
+@keyframes after_enter {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 5px;
+  }
+}
+@media screen and (max-width: 900px) {
+  header .menu-wrapper {
+    height: 50px;
+  }
+  header .menu-wrapper .menu-logo {
+    width: 35px;
+    min-width: 35px;
+  }
+}
+
+.rights {
+  font-size: 11px;
+  font-weight: 700;
+}
+.rights .link__text {
+  color: #0282F9;
+}
+
+footer {
+  height: 480px;
+  background-image: url("../img/footer-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+footer .footer__body {
+  height: calc(100% - 110px);
+}
+footer .footer__body .container {
+  display: flex;
+  padding: 10px;
+  background-image: url("../img/dc-logo-bg.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+footer .footer__body .container .col {
+  min-width: 150px;
+}
+footer .footer__body .container .col .widget {
+  padding-top: 25px;
+}
+footer .footer__body .container .col .widget .widget__title {
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 10px;
+  font-size: 17px;
+  white-space: nowrap;
+}
+footer .footer__body .container .col .widget .widget__menu li {
+  padding: 3px 0;
+  font-size: 12px;
+}
+footer .footer__body .container .col .widget li {
+  color: #959595;
+}
+footer .footer__body .container .col .widget li a:hover {
+  color: #0282F9;
+}
+footer .footer__body .container .rights__general {
+  align-self: flex-end;
+  color: #959595;
+  margin: 0 auto;
+}
+footer .footer__social {
+  height: 110px;
+  background-color: #303030;
+}
+footer .footer__social .container {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer__social .container .btn-sign {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  border: 2px solid #0282F9;
+  height: 55px;
+  padding: 0 20px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+footer .footer__social .container .btn-sign:hover {
+  background-color: #0282F9;
+}
+footer .footer__social .container .link__social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .footer__social .container .link__social .link__title {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  color: #0282F9;
+}
+footer .footer__social .container .link__social ul {
+  display: contents;
+}
+footer .footer__rights {
+  display: none;
+  color: #959595;
+  height: 60px;
+  background-color: #212121;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+@media screen and (max-width: 900px) {
+  footer .footer__body .container {
+    background-image: url();
+  }
+}
+@media screen and (max-width: 560px) {
+  footer {
+    height: 190px;
+    background-image: url();
+    background-color: #1C1C1C;
+  }
+  footer .footer__body {
+    display: none;
+  }
+  footer .footer__social {
+    height: 100%;
+    background-color: transparent;
+  }
+  footer .footer__social .container {
+    background-image: url("../img/dc-logo-bg.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 80%;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  footer .footer__social .container .btn-sign {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    white-space: nowrap;
+    border: 2px solid #0282F9;
+    height: 55px;
+    padding: 0 20px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    background-color: #0282F9;
+  }
+  footer .footer__social .container .link__social {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  footer .footer__social .container .link__social .link__title {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    white-space: nowrap;
+    color: #0282F9;
+  }
+  footer .footer__social .container .link__social ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  footer .footer__rights {
+    display: flex;
+  }
+}

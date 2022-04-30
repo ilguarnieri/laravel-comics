@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Greta Sans Condensed Bold","Greta Sans Bold",Arial,sans-serif; 
+}
+  
+ol, ul{
+    list-style: none;
+}
+  
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+  
+img{
+    max-width: 100%
+}
+  
+.container{
+    @include container;
+}
+  
+.d-none{
+    display: none;
+}
+  
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: $blue;
+}
+  
+@media screen and (max-width: 900px) {
+    .p-fix{
+      position: fixed;
+      background-color: white;
+      z-index: 999;
+    }
+}

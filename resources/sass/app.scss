@@ -1,0 +1,61 @@
+$blue: #0282F9;
+$grayFooter: #959595;
+$black1: #1C1C1C;
+$black2: #212121;
+$black3: #303030;
+$blackMenu: #242526;
+
+@mixin container{
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+@mixin styleFont{
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    white-space: nowrap;
+}
+
+@mixin widget{
+    padding-top: 25px;
+
+    .widget__title{
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 10px;
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+    .widget__menu{
+        li{
+            padding: 3px 0;
+            font-size: 12px;
+        }
+    }
+}
+
+@mixin btn{
+    @include styleFont;
+    border: 2px solid $blue;
+    height: 55px;
+    padding: 0 20px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+@mixin btnBlue{
+    @include btn;
+    background-color: $blue;
+    height: 40px;
+    width: 185px;
+}
+
+@import 'layouts/layout.scss';
+@import 'componentes/header.scss';
+@import 'componentes/rightsAG.scss';
+@import 'componentes/footer.scss'

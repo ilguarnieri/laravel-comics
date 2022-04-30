@@ -1,0 +1,78 @@
+header{
+    user-select: none;
+
+    .menu-wrapper{
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+
+        .menu-logo{
+            max-width: 80px;
+            cursor: pointer;
+        }
+
+        .menu-link{
+            display: flex;
+            height: 100%;
+            gap: 34px;
+            
+            ul{
+                display: contents;
+
+                .nav-item{
+                    @include styleFont;
+                    font-size: 12px;
+
+                    a{
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                    }
+
+                    &.active, :hover{
+                        color: $blue;
+                        transition: all 300ms linear;
+                    }
+
+                    &.active, &:hover{
+
+                        a::after{
+                            content: '';
+                            display: block;
+                            background-color: $blue;
+                            height: 5px;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            left: 0;
+                            animation: after_enter 300ms linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes after_enter {
+        0%{
+            height: 0;
+        }
+        100%{
+            height: 5px;
+        }        
+    }
+
+    @media screen and (max-width: 900px) {
+        .menu-wrapper{
+            height: 50px;
+
+            .menu-logo{
+            width: 35px;
+            min-width: 35px;
+            }
+        }
+    }
+}
