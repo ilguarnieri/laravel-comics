@@ -1,1 +1,10 @@
-@import 'componentes/mainCategories'
+@import 'componentes/mainCategories';
+
+.jumbo{
+    max-height: 400px;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+    }
+}
