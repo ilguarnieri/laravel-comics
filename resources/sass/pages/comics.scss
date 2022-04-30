@@ -1,10 +1,75 @@
 @import 'componentes/mainCategories';
 
-.jumbo{
-    max-height: 400px;
-    overflow: hidden;
+.main{ 
+    text-align: center;
+    background-color: $black1;
 
-    img{
-        width: 100%;
+    .jumbo{
+        max-height: 400px;
+        overflow: hidden;
+    
+        img{
+            width: 100%;
+        }
+    }
+    
+    .container{
+        text-align: start;
+        padding: 0 10px;
+        
+        .btn-series{
+            @include btn;
+            font-size: 18px;
+            background-color: $blue;
+            transform: translateY(-50%);
+        }
+        
+        .series-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+            text-align: start;
+            gap: 28px;
+        }
+
+        .dc__thumb{
+            max-width: 185px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 300ms ease-in-out;
+    
+            .thumb-img{
+                height: 185px;
+                overflow: hidden;
+                margin-bottom: 20px;
+            }
+            .thumb-title{
+                text-transform: uppercase;
+                letter-spacing: -0.05em;
+                font-size: 14px;
+                color: white;
+            }
+    
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .btn-load{
+        @include btnBlue;
+        margin-bottom: 20px;
+
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    }
+
+    @media all and (max-width:843px) {
+        .container{
+            text-align: center;
+        }        
     }
 }
