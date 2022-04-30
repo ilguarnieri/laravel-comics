@@ -4,4 +4,6 @@
 
 @section('mainContent')
 
+@include('componentes.mainCategories')
+
 @endsection
