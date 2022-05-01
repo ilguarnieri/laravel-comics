@@ -12,6 +12,12 @@
     @include('componentes.header')
 
     <main>
+
+        <!-- jumbo -->
+        <section class="jumbo">
+            <img src="{{ asset('assets/img/jumbotron.jpg') }}" >
+        </section>
+        
         @yield('mainContent')
     </main>
 

@@ -11,7 +11,7 @@
             <div class="menu-link">
                 <ul>
                     <li class="nav-item"><a href="#">Characters</a></li>
-                    <li class="nav-item active"><a href="/">Comics</a></li>
+                    <li class="nav-item active"><a href="{{ route('pages.index') }}">Comics</a></li>
                     <li class="nav-item"><a href="#">Movies</a></li>
                     <li class="nav-item"><a href="#">TV</a></li>
                     <li class="nav-item"><a href="#">Games</a></li>

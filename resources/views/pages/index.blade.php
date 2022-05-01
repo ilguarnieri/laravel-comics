@@ -6,11 +6,6 @@
 
 <section class="main">
 
-    <!-- jumbo -->
-    <section class="jumbo">
-        <img src="{{ asset('assets/img/jumbotron.jpg') }}" >
-    </section>
-
     <div class="container">
         <!-- title -->
         <button class="btn-series">Current series</button>

@@ -36,6 +36,14 @@ img {
   background: #0282F9;
 }
 
+.jumbo {
+  max-height: 400px;
+  overflow: hidden;
+}
+.jumbo img {
+  width: 100%;
+}
+
 @media screen and (max-width: 900px) {
   .p-fix {
     position: fixed;
@@ -164,13 +172,6 @@ header .menu-wrapper .menu-link ul .nav-item.active a::after, header .menu-wrapp
 .main {
   text-align: center;
   background-color: #1C1C1C;
-}
-.main .jumbo {
-  max-height: 400px;
-  overflow: hidden;
-}
-.main .jumbo img {
-  width: 100%;
 }
 .main .container {
   text-align: start;
