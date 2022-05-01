@@ -248,6 +248,53 @@ header .menu-wrapper .menu-link ul .nav-item.active a::after, header .menu-wrapp
   }
 }
 
+.blue-bar {
+  background-color: #0282F9;
+  height: 80px;
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+.info-wrapper .info-book {
+  max-width: 70%;
+  padding: 25px 20px;
+}
+.info-wrapper .adv-wrapper {
+  text-align: end;
+}
+.info-wrapper .book-status {
+  margin: 25px 0 20px;
+  display: flex;
+  background-color: #55BA59;
+  justify-content: space-between;
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid #444;
+  align-items: center;
+}
+.info-wrapper .book-status .book-price {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: center;
+}
+.info-wrapper .book-status .text-transparent {
+  opacity: 0.7;
+}
+.info-wrapper .book-status .book-check {
+  border-left: 1px solid #444;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 350ms linear;
+}
+.info-wrapper .book-status .book-check:hover {
+  background-color: green;
+}
+
 .rights {
   font-size: 11px;
   font-weight: 700;

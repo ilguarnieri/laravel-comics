@@ -1,4 +1,5 @@
 $blue: #0282F9;
+$lightgreen: #55BA59;
 $grayFooter: #959595;
 $black1: #1C1C1C;
 $black2: #212121;
@@ -57,5 +58,6 @@ $blackMenu: #242526;
 
 @import 'layouts/layout.scss';
 @import 'componentes/header.scss';
-@import 'pages/comics';
+@import 'pages/index';
+@import 'pages/show';
 @import 'componentes/footer.scss'
