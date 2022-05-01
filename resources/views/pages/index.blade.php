@@ -7,21 +7,26 @@
 <section class="main">
 
     <div class="container">
+
         <!-- title -->
         <button class="btn-series">Current series</button>
 
         <!-- thumbs wrapper -->
         <div class="series-wrapper">
             
-            @foreach ($comics as $comic)
+            @foreach ($comics as $index => $comic)
             <div class="dc__thumb">
 
-                <figure class="thumb-img">
-                    <img src="{{ $comic['thumb'] }}">
-                </figure>
+                <a href="{{ route('pages.show', ['id' => $index]) }}">
+
+                    <figure class="thumb-img">
+                        <img src="{{ $comic['thumb'] }}">
+                    </figure>
+                    
+                    <h4 class="thumb-title">{{ $comic['series']}}</h4>
+
+                </a>
                 
-                <h4 class="thumb-title">{{ $comic['series']}}</h4>
-        
             </div>                
             @endforeach
 
