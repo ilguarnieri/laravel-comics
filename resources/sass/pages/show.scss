@@ -50,14 +50,15 @@
     }
 }
 
-.info-wrapper{
+.book-wrapper{
     display: flex;
     justify-content: space-between;
-    padding: 50px 0;
+    padding: 50px 20px;
+    gap: 20px;
 
-    .info-book{
+    .book-card{
         max-width: 70%;
-        padding: 25px 20px;
+        padding: 25px 0;
 
         .book-status{
             margin: 25px 0 20px;
@@ -121,13 +122,13 @@
 
     .adv-wrapper{
         text-align: end;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 15px;
 
         .adv-title{
             margin-bottom: 5px;
             color: #444;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 15px;
         }
 
         @media screen and (max-width: 590px){
@@ -136,8 +137,64 @@
     }
 }
 
-.talent-specs{
+.comic-info{
     background-color: $lightgray;
-    min-height: 300px;
-    border-top: 1px solid $grayFooter;
+    border-top: 1px solid #ccc;
+    font-weight: 600;
+    min-height: 400px;
+    color: #666;
+    
+    .container{
+        display: flex;
+        gap: 50px;
+        padding: 0 10px;
+    
+        .col-2{
+            width: 50%;
+            margin-bottom: 20px;
+
+            .col-title{
+                padding: 28px 0;
+                color: $black3;
+            }
+
+            .info-wrapper{
+                font-size: 14px;
+                display: flex;
+                justify-content: space-between;
+                border-top: 1px solid #ccc;
+                padding: 10px;
+
+                .info-detail{
+                    width: 70%;
+                }
+
+                &:last-child{
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+            @media screen and (max-width: 590px){
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .text-blue{
+            color: $lightblue;
+            transition: all 350ms linear;
+
+            &:hover{
+                text-decoration: underline;
+            }
+
+            &.text-type{
+                text-transform: uppercase;
+            }
+        }
+
+        @media screen and (max-width: 590px){
+            flex-direction: column;
+            gap: 0;
+        }
+    }
 }

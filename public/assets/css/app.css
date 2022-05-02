@@ -296,16 +296,17 @@ header .menu-wrapper .menu-link ul .nav-item.active a::after, header .menu-wrapp
   }
 }
 
-.info-wrapper {
+.book-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 50px 0;
+  padding: 50px 20px;
+  gap: 20px;
 }
-.info-wrapper .info-book {
+.book-wrapper .book-card {
   max-width: 70%;
-  padding: 25px 20px;
+  padding: 25px 0;
 }
-.info-wrapper .info-book .book-status {
+.book-wrapper .book-card .book-status {
   margin: 25px 0 20px;
   display: flex;
   background-color: #55BA59;
@@ -315,69 +316,119 @@ header .menu-wrapper .menu-link ul .nav-item.active a::after, header .menu-wrapp
   border-bottom: 1px solid #444;
   align-items: center;
 }
-.info-wrapper .info-book .book-status .book-price {
+.book-wrapper .book-card .book-status .book-price {
   padding: 20px;
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
   align-items: center;
 }
-.info-wrapper .info-book .book-status .text-transparent {
+.book-wrapper .book-card .book-status .text-transparent {
   opacity: 0.7;
 }
-.info-wrapper .info-book .book-status .book-check {
+.book-wrapper .book-card .book-status .book-check {
   border-left: 1px solid #444;
   padding: 20px;
   cursor: pointer;
   transition: all 350ms linear;
 }
-.info-wrapper .info-book .book-status .book-check:hover {
+.book-wrapper .book-card .book-status .book-check:hover {
   background-color: green;
 }
 @media screen and (max-width: 420px) {
-  .info-wrapper .info-book .book-status {
+  .book-wrapper .book-card .book-status {
     flex-direction: column;
   }
-  .info-wrapper .info-book .book-status .book-price {
+  .book-wrapper .book-card .book-status .book-price {
     width: 100%;
   }
-  .info-wrapper .info-book .book-status .book-check {
+  .book-wrapper .book-card .book-status .book-check {
     border-left: none;
     border-top: 1px solid #444;
     width: 100%;
     text-align: center;
   }
 }
-.info-wrapper .info-book .text-description {
+.book-wrapper .book-card .text-description {
   color: #888;
   font-weight: 600;
   line-height: 25px;
 }
 @media screen and (max-width: 590px) {
-  .info-wrapper .info-book {
+  .book-wrapper .book-card {
     max-width: 100%;
   }
 }
-.info-wrapper .adv-wrapper {
+.book-wrapper .adv-wrapper {
   text-align: end;
+}
+.book-wrapper .adv-wrapper .adv-title {
+  margin-bottom: 5px;
+  color: #444;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 15px;
 }
-.info-wrapper .adv-wrapper .adv-title {
-  margin-bottom: 5px;
-  color: #444;
-}
 @media screen and (max-width: 590px) {
-  .info-wrapper .adv-wrapper {
+  .book-wrapper .adv-wrapper {
     display: none;
   }
 }
 
-.talent-specs {
+.comic-info {
   background-color: #F6F6F6;
-  min-height: 300px;
-  border-top: 1px solid #959595;
+  border-top: 1px solid #ccc;
+  font-weight: 600;
+  min-height: 400px;
+  color: #666;
+}
+.comic-info .container {
+  display: flex;
+  gap: 50px;
+  padding: 0 10px;
+}
+.comic-info .container .col-2 {
+  width: 50%;
+  margin-bottom: 20px;
+}
+.comic-info .container .col-2 .col-title {
+  padding: 28px 0;
+  color: #303030;
+}
+.comic-info .container .col-2 .info-wrapper {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+.comic-info .container .col-2 .info-wrapper .info-detail {
+  width: 70%;
+}
+.comic-info .container .col-2 .info-wrapper:last-child {
+  border-bottom: 1px solid #ccc;
+}
+@media screen and (max-width: 590px) {
+  .comic-info .container .col-2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.comic-info .container .text-blue {
+  color: #00A9D9;
+  transition: all 350ms linear;
+}
+.comic-info .container .text-blue:hover {
+  text-decoration: underline;
+}
+.comic-info .container .text-blue.text-type {
+  text-transform: uppercase;
+}
+@media screen and (max-width: 590px) {
+  .comic-info .container {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .rights {
