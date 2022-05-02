@@ -42,6 +42,7 @@ img {
 }
 .jumbo img {
   width: 100%;
+  display: block;
 }
 
 @media screen and (max-width: 900px) {
@@ -281,6 +282,18 @@ header .menu-wrapper .menu-link ul .nav-item.active a::after, header .menu-wrapp
   position: absolute;
   bottom: 0;
   padding: 5px;
+  cursor: pointer;
+  transition: all 350ms linear;
+}
+.blue-bar .container .thumb-wrapper .gallery-wrapper:hover {
+  background-color: #55BA59;
+}
+@media screen and (max-width: 590px) {
+  .blue-bar .container .thumb-wrapper {
+    width: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .info-wrapper {
@@ -292,10 +305,7 @@ header .menu-wrapper .menu-link ul .nav-item.active a::after, header .menu-wrapp
   max-width: 70%;
   padding: 25px 20px;
 }
-.info-wrapper .adv-wrapper {
-  text-align: end;
-}
-.info-wrapper .book-status {
+.info-wrapper .info-book .book-status {
   margin: 25px 0 20px;
   display: flex;
   background-color: #55BA59;
@@ -305,24 +315,69 @@ header .menu-wrapper .menu-link ul .nav-item.active a::after, header .menu-wrapp
   border-bottom: 1px solid #444;
   align-items: center;
 }
-.info-wrapper .book-status .book-price {
+.info-wrapper .info-book .book-status .book-price {
   padding: 20px;
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
   align-items: center;
 }
-.info-wrapper .book-status .text-transparent {
+.info-wrapper .info-book .book-status .text-transparent {
   opacity: 0.7;
 }
-.info-wrapper .book-status .book-check {
+.info-wrapper .info-book .book-status .book-check {
   border-left: 1px solid #444;
   padding: 20px;
   cursor: pointer;
   transition: all 350ms linear;
 }
-.info-wrapper .book-status .book-check:hover {
+.info-wrapper .info-book .book-status .book-check:hover {
   background-color: green;
+}
+@media screen and (max-width: 420px) {
+  .info-wrapper .info-book .book-status {
+    flex-direction: column;
+  }
+  .info-wrapper .info-book .book-status .book-price {
+    width: 100%;
+  }
+  .info-wrapper .info-book .book-status .book-check {
+    border-left: none;
+    border-top: 1px solid #444;
+    width: 100%;
+    text-align: center;
+  }
+}
+.info-wrapper .info-book .text-description {
+  color: #888;
+  font-weight: 600;
+  line-height: 25px;
+}
+@media screen and (max-width: 590px) {
+  .info-wrapper .info-book {
+    max-width: 100%;
+  }
+}
+.info-wrapper .adv-wrapper {
+  text-align: end;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+}
+.info-wrapper .adv-wrapper .adv-title {
+  margin-bottom: 5px;
+  color: #444;
+}
+@media screen and (max-width: 590px) {
+  .info-wrapper .adv-wrapper {
+    display: none;
+  }
+}
+
+.talent-specs {
+  background-color: #F6F6F6;
+  min-height: 300px;
+  border-top: 1px solid #959595;
 }
 
 .rights {

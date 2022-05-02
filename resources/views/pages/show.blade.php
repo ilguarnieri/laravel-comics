@@ -13,7 +13,7 @@
             <figure class="thumb-img">
                 <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
             </figure>
-            
+
             {{-- type --}}
             <div class="type-wrapper">
                 <p>{{ $comic['type'] }}</p>
@@ -33,7 +33,7 @@
 
     <div class="info-book">
         {{-- title --}}
-        <h2>{{ $comic['title'] }}</h2>
+        <h1>{{ $comic['title'] }}</h1>
 
         <div class="book-status">
             {{-- price --}}
@@ -54,9 +54,28 @@
 
     {{-- ADV --}}
     <div class="adv-wrapper">
-        <p>Advertisement</p>
+        <p class="adv-title">Advertisement</p>
         <img src="{{ asset('assets/img/adv.jpg') }}" alt="adv">
     </div>
 </section>
+
+
+{{-- talent & spec book --}}
+<section class="talent-specs">
+    <div class="container">
+
+        <div class="talent-book">
+            <h2 class="">Talent</h2>
+
+        </div>
+
+        <div class="specs-book">
+            <h2 class="">Spacs</h2>
+
+        </div>
+    </div>
+</section>
+
+@include('componentes.mainCategories')
 
 @endsection
